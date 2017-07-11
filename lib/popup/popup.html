@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Popup</title>
+    <link rel="stylesheet" href="../../css/reset.css" />
+    <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+
+<a href="javascript:void(0)" data-open-popup="one">open popup 'one'</a>
+<a href="javascript:void(0)" data-open-popup="two">open popup 'two'</a>
+<a href="javascript:void(0)" data-open-popup="three">open popup 'three'</a>
+
+<div class="popup">
+    <!-- popup #01 -->
+    <div class="popup__content popup__content--one" data-index="one">
+        <span class="popup__close"><img src="../../images/icons/icon-close.svg" class="icon icon--svg icon--close" /></span>
+        <div class="popup__text">
+            <h2 class="popup__title">
+                <span>1</span>
+            </h2>
+            <p class="popup__paragraph">בלנטיינ׳ס ודייב מא בשיתוף רדיו הקצה יאזינו לשיר שלכם ויחליטו אם תעלו לגמר.</p>
+        </div>
+    </div>
+
+    <!-- popup #02 -->
+    <div class="popup__content popup__content--two" data-index="two">
+        <span class="popup__close"><img src="../../images/icons/icon-close.svg" class="icon icon--svg icon--close" /></span>
+        <div class="popup__text">
+            <h2 class="popup__title">
+                <span>2</span>
+            </h2>
+            <p class="popup__paragraph">2</p>
+        </div>
+    </div>
+
+    <!-- popup #01 -->
+    <div class="popup__content popup__content--three" data-index="three">
+        <span class="popup__close"><img src="../../images/icons/icon-close.svg" class="icon icon--svg icon--close" /></span>
+        <div class="popup__text">
+            <h2 class="popup__title">
+                <span>3</span>
+            </h2>
+            <p class="popup__paragraph">3</p>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.7.2.min.js"></script>
+<script src="popup.js"></script>
+</body>
+</html>

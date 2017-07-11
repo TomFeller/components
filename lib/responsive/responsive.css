@@ -1,0 +1,41 @@
+html {
+  font-size: 62.5%; }
+
+.container {
+  margin: 0 auto; }
+  @media only screen and (max-width: 639px) {
+    .container {
+      background-color: red; } }
+  @media only screen and (min-width: 640px) {
+    .container {
+      background-color: blue; } }
+  @media only screen and (min-width: 768px) {
+    .container {
+      background-color: blue; } }
+  @media only screen and (min-width: 992px) {
+    .container {
+      background-color: pink; } }
+  @media only screen and (min-width: 1440px) {
+    .container {
+      background-color: yellow; } }
+  @media only screen and (min-width: 1600px) {
+    .container {
+      background-color: orange; } }
+  @media only screen and (max-width: 639px) {
+    .container {
+      width: 100%; } }
+  @media only screen and (min-width: 640px) {
+    .container {
+      width: 64rem; } }
+  @media only screen and (min-width: 768px) {
+    .container {
+      width: 75rem; } }
+  @media only screen and (min-width: 992px) {
+    .container {
+      width: 90rem; } }
+  @media only screen and (min-width: 1440px) {
+    .container {
+      width: 128rem; } }
+  @media only screen and (min-width: 1600px) {
+    .container {
+      width: 140rem; } }

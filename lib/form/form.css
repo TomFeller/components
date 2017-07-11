@@ -1,0 +1,112 @@
+.form {
+  max-width: 600px;
+  margin-top: 30px;
+  background-color: rgba(255, 255, 255, 0.4);
+  padding: 20px 20px 10px; }
+  .form__field {
+    width: 35%;
+    margin: 0 0 30px 10px;
+    border-bottom: 2px solid blue;
+    position: relative; }
+    .form__field--link {
+      width: 100%; }
+    .form__field--phone {
+      width: calc(30% - 30px); }
+    .form__field--cb {
+      width: 100%;
+      border-bottom: 0; }
+      .form__field--cb:after {
+        display: none; }
+    .form__field--error {
+      display: none;
+      color: blue;
+      margin-top: 5px;
+      position: absolute;
+      font-size: 11px; }
+      .notValid .form__field--error {
+        display: block; }
+    .form__field:after {
+      content: '';
+      position: absolute;
+      right: 0;
+      bottom: -2px;
+      height: 2px;
+      width: 0;
+      -webkit-transition: width .3s;
+      -o-transition: width .3s;
+      transition: width .3s; }
+    .form__field.notValid:after {
+      background-color: red;
+      width: 100%; }
+  .form__label {
+    -webkit-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+    transform: translateY(0px);
+    font-size: 12px;
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+    cursor: pointer;
+    color: red; }
+    .form__label--text {
+      position: absolute;
+      bottom: 5px; }
+    .form__label--cb {
+      padding-left: 30px; }
+    .focus .form__label {
+      -webkit-transform: translateY(-20px);
+      -ms-transform: translateY(-20px);
+      transform: translateY(-20px);
+      font-size: 10px; }
+  .form__input {
+    width: 100%;
+    height: 20px;
+    border: 0;
+    cursor: pointer;
+    outline: 0;
+    background-color: transparent; }
+    .form__input--cb {
+      width: auto;
+      height: auto; }
+  .form .checkbox {
+    position: absolute; }
+    .form .checkbox__input {
+      position: relative;
+      width: 20px;
+      height: 20px;
+      z-index: 2;
+      margin: 0;
+      opacity: 0; }
+    .form .checkbox__square {
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      border: 1px solid red;
+      display: -webkit-inline-box;
+      display: -webkit-inline-flex;
+      display: -ms-inline-flexbox;
+      display: inline-flex;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      padding: .4rem; }
+      .form .checkbox__square.checked {
+        background-color: blue; }
+  .form__submit {
+    width: 100%;
+    border: 0; }
+    .form__submit button {
+      background-color: red;
+      width: 100%;
+      border: 0;
+      color: #fff;
+      padding: 10px;
+      font-size: 20px;
+      cursor: pointer; }

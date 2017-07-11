@@ -1,0 +1,62 @@
+.popup {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.9);
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: none; }
+  .popup.open {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex; }
+  .popup__content {
+    width: 500px;
+    background-color: #fff;
+    position: relative;
+    display: none; }
+    .popup__content.active {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex; }
+  .popup__close {
+    padding: .4rem;
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    cursor: pointer;
+    background-color: #000;
+    color: #fff;
+    top: -2rem;
+    right: 0; }
+  .popup__title {
+    color: #fff;
+    font-size: 2rem; }
+    .popup__title span {
+      color: red; }
+  .popup__paragraph {
+    color: #fff;
+    font-size: 1.3rem; }
