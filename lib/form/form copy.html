@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form</title>
+    <link rel="stylesheet" href="form.css">
+
+</head>
+<body>
+<form class="content__form form">
+    <div class="form__field form__field--name">
+        <label class="form__label form__label--text" for="full-name">*שם מלא</label>
+        <input class="form__input form__input--text" type="text" name="full-name" id="full-name"/>
+        <span class="form__field--error">נא להזין שם</span>
+    </div>
+    <div class="form__field form__field--email">
+        <label class="form__label form__label--text" for="email">*אימייל</label>
+        <input class="form__input form__input--text email" type="email" name="email" id="email" data-regex="email"/>
+        <span class="form__field--error">נא להזין כתובת מייל חוקית</span>
+    </div>
+    <div class="form__field form__field--phone">
+        <label class="form__label form__label--text" for="phone">*טלפון</label>
+        <input class="form__input form__input--text" type="tel" name="phone" id="phone" data-regex="numbers"/>
+        <span class="form__field--error">נא להזין מספרים בלבד</span>
+    </div>
+    <div class="form__field form__field--link">
+        <label class="form__label form__label--text" for="link">*לינק לשיר ברשת (Youtube, Soundcloud,
+            Bandcamp)</label>
+        <input class="form__input form__input--text" type="text" name="link" id="link"/>
+        <span class="form__field--error">נא להזין לינק</span>
+    </div>
+    <div class="form__field form__field--cb">
+        <div class="checkbox">
+            <input class="form__input form__input--cb checkbox__input" type="checkbox" name="verify" id="verify"/>
+            <span class="checkbox__square"></span>
+        </div>
+        <label class="form__label form__label--cb" for="verify">אני מאשר את התקנון</label>
+    </div>
+    <div class="form__field form__submit">
+        <button type="submit" id="submit">שלח</button>
+    </div>
+</form>
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.7.2.min.js"></script>
+<script src="form.js"></script>
+</body>
+</html>

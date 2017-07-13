@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!-- FACEBOOK SDK -->
+<!-- For every new app go to: 'https://developers.facebook.com/apps/' and update those details -->
+<script>
+    window.fbAsyncInit = function() {
+        FB.init({
+            appId   : '451245608570025',
+            cookie  : true,
+            xfbml   : true,
+            version : 'v2.8',
+            domains :'fellerweb.com'
+        });
+        FB.AppEvents.logPageView();
+    };
+
+    (function(d, s, id){
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {return;}
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+</script>
+
+
+<script src="../../jquery/jquery-3.2.1.js"></script>
+<script src="/lib/facebook/facebook.js"></script>
+</body>
+</html>

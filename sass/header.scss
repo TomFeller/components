@@ -1,0 +1,27 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: $gutter;
+  background-color: blue;
+  &__nav {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  &__item {
+    margin: 0 $gutter;
+    a {
+      color: $text-color;
+      font-size: $text-size;
+    }
+    &.active {
+      a {
+        color: red;
+      }
+    }
+  }
+}
