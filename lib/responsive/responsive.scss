@@ -1,48 +1,113 @@
-$viewport-mobile-large: 640px;
-$viewport-mobile: $viewport-mobile-large - 1px;
-$viewport-tablet: 768px;
-$viewport-desktop: 992px;
-$viewport-large-desktop: 1440px;
-$viewport-wide: 1600px;
+/**
+*
+* This file contains all responsive mixin's.
+*
+* @include viewport-size(the query) { The code for the query}
+*
+**/
+
+@import 'responsive-variables.scss';
 
 @mixin viewport-size($media) {
   @if $media == mobile {
-    @media only screen and (max-width: $viewport-mobile) {
+    @media only screen and (min-width: $viewport-mobile) {
       @content;
     }
-  }
-  @if $media == mobile-lg {
-    @media only screen and (min-width: $viewport-mobile-large) {
-      @content;
-    }
-  }
-  @if $media == tablet {
-    @media only screen and (min-width: $viewport-tablet) {
-      @content;
-    }
-  }
-  @if $media == desktop {
-    @media only screen and (min-width: $viewport-desktop) {
-      @content;
-    }
-  }
-  @if $media == desktop-lg {
-    @media only screen and (min-width: $viewport-large-desktop) {
-      @content;
-    }
-  }
-  @if $media == wide {
-    @media only screen and (min-width: $viewport-wide) {
-      @content;
+  } @else {
+    @if $media == mobile-lg {
+      @media only screen and (min-width: $viewport-mobile-lg) {
+        @content;
+      }
+    } @else {
+      @if $media == tablet {
+        @media only screen and (min-width: $viewport-tablet) {
+          @content;
+        }
+      } @else {
+        @if $media == desktop {
+          @media only screen and (min-width: $viewport-desktop) {
+            @content;
+          }
+        } @else {
+          @if $media == desktop-md {
+            @media only screen and (min-width: $viewport-desktop-md) {
+              @content;
+            }
+          } @else {
+            @if $media == desktop-lg {
+              @media only screen and (min-width: $viewport-desktop-lg) {
+                @content;
+              }
+            } @else {
+              @if $media == wide {
+                @media only screen and (min-width: $viewport-wide) {
+                  @content;
+                }
+              } @else {
+                @media only screen and (min-width: $media + px) {
+                  @content;
+                }
+              }
+            }
+          }
+        }
+      }
     }
   }
 }
 
-@mixin responsive-prop($property, $m:"", $ml:"", $t:"", $d:"", $dl:"", $w:"" ) {
+@mixin v-mobile() {
+  @include viewport-size(mobile) {
+    @content;
+  }
+;
+}
+
+@mixin v-mobile-lg() {
+  @include viewport-size(mobile-lg) {
+    @content;
+  }
+;
+}
+
+@mixin v-tablet() {
+  @include viewport-size(tablet) {
+    @content;
+  }
+;
+}
+
+@mixin v-desktop() {
+  @include viewport-size(desktop) {
+    @content;
+  }
+;
+}
+
+@mixin v-desktop-md() {
+  @include viewport-size(desktop-md) {
+    @content;
+  }
+;
+}
+
+@mixin v-desktop-lg() {
+  @include viewport-size(desktop-lg) {
+    @content;
+  }
+;
+}
+
+@mixin v-wide() {
+  @include viewport-size(wide) {
+    @content;
+  }
+;
+}
+
+@mixin responsive-prop($property, $m:"", $ml:"", $t:"", $d:"", $dm:"", $dl:"", $w:"" ) {
   @if $m  != "" {
-    @include viewport-size(mobile) {
-      #{$property}: $m;
-    }
+    #{$property}: $m;
   }
   @if $ml != "" {
     @include viewport-size(mobile-lg) {
@@ -59,6 +124,11 @@ $viewport-wide: 1600px;
       #{$property}: $d;
     }
   }
+  @if $dm != "" {
+    @include viewport-size(desktop-md) {
+      #{$property}: $dm;
+    }
+  }
   @if $dl != "" {
     @include viewport-size(desktop-lg) {
       #{$property}: $dl;
@@ -71,12 +141,38 @@ $viewport-wide: 1600px;
   }
 }
 
+@mixin responsive-mtd($property, $m:"", $t:"", $d:"") {
+  @if $m  != "" {
+    #{$property}: $m;
+  }
+  @if $t != "" {
+    @include viewport-size(tablet) {
+      #{$property}: $t;
+    }
+  }
+  @if $d  != "" {
+    @include viewport-size(desktop) {
+      #{$property}: $d;
+    }
+  }
+}
+
 html {
   font-size: 62.5%;
 }
-
 .container {
-  @include responsive-prop(background-color, red, blue, blue, pink, yellow, orange);
-  @include responsive-prop(width, 100%, 64rem, 75rem, 90rem, 128rem, 140rem);
+  @include responsive-prop(background-color, black, red, blue, brown, pink, yellow, orange);
+  @include responsive-mtd('border-radius', 1rem, 2rem, 3rem);
   margin: 0 auto;
+}
+
+.wrapper {
+  @include responsive-prop(padding, 0 rem, 0 1rem, 0 1.8rem, 0 9.2rem, 0 12rem, 0 16rem, 0 20rem);
+
+}
+
+.wrapper {
+  @include viewport-size(400) {
+    background-color: red;
+  }
 }

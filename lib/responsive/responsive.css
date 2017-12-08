@@ -1,18 +1,27 @@
+/**
+*
+* This file contains all responsive mixin's.
+*
+* @include viewport-size(the query) { The code for the query}
+*
+**/
 html {
   font-size: 62.5%; }
 
 .container {
+  background-color: black;
+  border-radius: 1rem;
   margin: 0 auto; }
-  @media only screen and (max-width: 639px) {
-    .container {
-      background-color: red; } }
   @media only screen and (min-width: 640px) {
     .container {
-      background-color: blue; } }
+      background-color: red; } }
   @media only screen and (min-width: 768px) {
     .container {
       background-color: blue; } }
   @media only screen and (min-width: 992px) {
+    .container {
+      background-color: brown; } }
+  @media only screen and (min-width: 1200px) {
     .container {
       background-color: pink; } }
   @media only screen and (min-width: 1440px) {
@@ -21,21 +30,34 @@ html {
   @media only screen and (min-width: 1600px) {
     .container {
       background-color: orange; } }
-  @media only screen and (max-width: 639px) {
-    .container {
-      width: 100%; } }
-  @media only screen and (min-width: 640px) {
-    .container {
-      width: 64rem; } }
   @media only screen and (min-width: 768px) {
     .container {
-      width: 75rem; } }
+      border-radius: 2rem; } }
   @media only screen and (min-width: 992px) {
     .container {
-      width: 90rem; } }
+      border-radius: 3rem; } }
+
+.wrapper {
+  padding: 0 rem; }
+  @media only screen and (min-width: 640px) {
+    .wrapper {
+      padding: 0 1rem; } }
+  @media only screen and (min-width: 768px) {
+    .wrapper {
+      padding: 0 1.8rem; } }
+  @media only screen and (min-width: 992px) {
+    .wrapper {
+      padding: 0 9.2rem; } }
+  @media only screen and (min-width: 1200px) {
+    .wrapper {
+      padding: 0 12rem; } }
   @media only screen and (min-width: 1440px) {
-    .container {
-      width: 128rem; } }
+    .wrapper {
+      padding: 0 16rem; } }
   @media only screen and (min-width: 1600px) {
-    .container {
-      width: 140rem; } }
+    .wrapper {
+      padding: 0 20rem; } }
+
+@media only screen and (min-width: 400px) {
+  .wrapper {
+    background-color: red; } }
